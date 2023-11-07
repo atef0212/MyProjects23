@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.NavContainer {
+  border: 2px red solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 5rem;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow: hidden;
+}
+.nav {
+  border: 2px red hidden;
+  height: fit-content;
+  width: 20%;
+}
+.navLi {
+  word-spacing: 2rem;
+  list-style: none;
+}
+.li {
+  display: inline;
+}
+a {
+  text-decoration: none;
+}
+.eye1 {
+  position: relative;
+  top: -55%;
+  width: 20em;
+  background-color: black;
+  height: fit-content;
+  clip-path: ellipse(49% 34% at 50% 98%);
+}
+.eye2 {
+  margin-left: 28%;
+  width: 125px;
+  height: 10em;
+  background-color: rgb(22, 11, 232);
+  clip-path: ellipse(42% 27% at 56% 98%);
+}
+.eye3 {
+  display: flex;
+  justify-content: center;
+  border: 2px red hidden;
+  width: 20%;
+  background-color: black;
+  height: 5rem; /* Adjust the height to match your desired size */
+  clip-path: ellipse(44% 66% at 44% 89%);
+}
+.eye4 {
+  width: 8em;
+
+  background-color: rgb(22, 11, 232);
+  height: 5rem; /* Adjust the height to match your desired size */
+  clip-path: ellipse(46% 53% at 47% 95%);
+}
