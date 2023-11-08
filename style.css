@@ -59,3 +59,22 @@ a {
   height: 5rem; /* Adjust the height to match your desired size */
   clip-path: ellipse(46% 53% at 47% 95%);
 }
+.Product img {
+  width: 150px;
+  height: 150px;
+}
+.Product {
+  margin-left: 25%;
+  margin-top: 1%;
+  border: 2px red solid;
+  width: 40vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.item {
+  width: 200px;
+  height: 250px;
+}

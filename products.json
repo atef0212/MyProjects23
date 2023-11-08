@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "name":" Redmi 12 ",
+        "marke":"XIAOMI",
+        "price": 200,
+        "image": "img/Redmi.jpg",
+        "description": "XIAOMI Redmi 12 128GB mit Displayschutzfolie"
+    },
+    {
+        "id": 2,
+        "name":" Blade A53+",
+        "marke":"ZTE",
+        "price": 250,
+        "image": "img/ASSET_MMS_109447874.webp",
+        "description": "ZTE Blade A53+ 64 GB Space Gray Dual SIM."
+    },
+    {
+        "id": 3,
+        "name":"  iPhone 8",
+        "marke":"APPLE",
+        "price": 290,
+        "image": "img/iphone8.webp",
+        "description": "APPLE REFURBISHED (*) Apple iPhone 8 Gold 64 GB 64 GB Gold"
+    },
+    {
+        "id": 4,
+        "name":"Galaxy A23",
+        "marke":"SAMSUNG",
+        "price": 200,
+        "image": "img/a23.webp",
+        "description": "SAMSUNG Galaxy A23 5G 64 GB Black Dual SIM"
+    },
+    {
+        "id": 5,
+        "name":"SC 230 Handy",
+        "marke":"SWISSTONE",
+        "price": 300,
+        "image": "img/233.webp",
+        "description": "SWISSTONE SC 230 Handy, Rot"
+    },
+    {
+        "id": 6,
+        "name":" REFURBISHED (*) S21 5G",
+        "marke":"SAMSUNG",
+        "price": 200,
+        "image": "img/S21.webp",
+        "description": "SAMSUNG REFURBISHED (*) S21 5G 128 GB Violett Dual SIM"
+    },
+    {
+        "id": 7,
+        "name":" S22+ 128 GB ",
+        "marke":"SAMSUNG",
+        "price": 200,
+        "image": "img/s22.jpeg",
+        "description": "SAMSUNG REFURBISHED (*) S22+ 128 GB Schwarz Dual SIM"
+    },
+    {
+        "id": 8,
+        "name":" IPHONE 14 PRO",
+        "marke":"APPLE",
+        "price": 200,
+        "image": "img/i14.webp",
+        "description": "APPLE IPHONE 14 PRO 512GB SPACE BLACK 512 GB Space Schwarz Dual SIM."
+    }
+
+]
