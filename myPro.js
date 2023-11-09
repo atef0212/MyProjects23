@@ -27,6 +27,7 @@ function cartList() {
       // Get the name, price, and image source of the selected product
       let name = document.querySelectorAll(".name")[index].textContent;
       let price = document.querySelectorAll(".price")[index].textContent;
+      let marke = document.querySelectorAll(".marke")[index].textContent;
       let picture = document
         .querySelectorAll(".imge")
         [index].getAttribute("src");
@@ -43,7 +44,7 @@ function cartList() {
 
       // Append the image and other information to the cart item
       cartItem.appendChild(imgElement);
-      cartItem.innerHTML += `<span>${name}</span> <span>${price}</span>`;
+      cartItem.innerHTML += `<br><span>${marke}</span><br><span>${name}</span> <br><span>${price}</span><br>`;
       // Fügt das Warenkorb-Element dem Container für den Warenkorb hinzu
       // Append the cart item to the shopping cart container
       cartul.appendChild(cartItem);
@@ -64,3 +65,11 @@ function cartList() {
 }
 // Call the cartList function to initialize the shopping cart functionality
 cartList();
+
+// Select the sidebar and the button to toggle the sidebar
+let sidebar = document.querySelector(".aside");
+let btnSideBar = document.querySelector(".btnX");
+
+btnSideBar.addEventListener("click", function () {
+  sidebar.classList.toggle("active");
+});

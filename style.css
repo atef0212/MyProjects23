@@ -81,19 +81,54 @@ a {
 /* shoppingCart */
 
 .aside {
-  /* border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px red solid;
   width: 15%;
-  height: 200px; */
+  height: fit-content;
   position: absolute;
-  top: 10%;
-  right: 0.5%;
+  top: 11.3%;
+  right: 0%;
+  transform: translateX(100%);
 }
+aside.active {
+  transform: translateX(0%);
+}
+
 #asideHead {
   float: right;
   margin-right: 10px;
 }
+.btnX {
+  position: absolute;
+  right: 0;
+  top: 9%;
+  width: 10%;
+  background-color: beige;
+}
 
 .cartItemImage {
-  width: 100px;
-  height: 100px;
+  width: 12rem;
+  height: 8rem;
+}
+#CartItems {
+  margin-top: 1rem;
+  /* border: 2px red solid;
+  width: fit-content; */
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+#CartItems li {
+  list-style: none;
+}
+.item h2 {
+  color: rgb(112, 44, 44);
+}
+#CartItems button {
+  width: fit-content;
+  position: relative;
+  left: 45%;
+  margin: 1%;
 }
