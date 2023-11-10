@@ -1,11 +1,11 @@
 import users from "./products.json" assert { type: "json" };
+// Make sure to import FontAwesome styles or link them in your HTML
+
 let ProductS = document.querySelector(".ProductS");
 let OUTPUT = document.querySelector(".Product");
 let totalOutput = document.querySelector("#total");
-/* Hier wird für jedes Produkt ein HTML-Element erzeugt und zur Seite hinzugefügt.
-Hier werden die Produkte auf der Webseite angezeigt.
- Für jedes Produkt wird ein HTML-Element mit Bild, Name, Marke,
- Preis und einer Schaltfläche zum Hinzufügen zum Warenkorb erstellt.*/
+
+// Display products on the webpage
 for (let item of users) {
   OUTPUT.innerHTML += `
     <div class="item">
@@ -23,20 +23,60 @@ for (let item of users) {
   `;
 }
 
-// ...
-
-/*Diese Funktion fügt jedem "In den Warenkorb" Button einen Event Listener hinzu.
- Wenn ein Benutzer auf die Schaltfläche klickt, 
-wird das entsprechende Produkt zum Warenkorb hinzugefügt.*/
-
-function cartList() {
+// Function to update the product list based on sorting
+function updateProductList() {
   const selectPrice = document.getElementById("selectPrice");
-  let addBtn = document.querySelectorAll(".add");
+  const selectedValue = selectPrice.value;
+
+  let sortedProducts;
+
+  if (selectedValue === "lowest") {
+    sortedProducts = users.slice().sort((a, b) => a.price - b.price);
+    OUTPUT.style.display = "none";
+  } else if (selectedValue === "highest") {
+    sortedProducts = users.slice().sort((a, b) => b.price - a.price);
+    OUTPUT.style.display = "none";
+  } else if (selectedValue === "all") {
+    sortedProducts = users.slice(); // Create a copy to avoid modifying the original array
+    OUTPUT.style.display = "block";
+  }
+
+  ProductS.innerHTML = generateProductList(sortedProducts);
+}
+
+// Function to generate the product list HTML
+function generateProductList(products) {
+  let productList = "";
+  for (let item of products) {
+    productList += `
+      <div class="productItem">
+        <img class="productImage" src="${item.image}" alt="${item.name}">
+        <div class="productDetails">
+          <h2 class="productName">${item.name}</h2>
+          <h2 class="productBrand">${item.brand}</h2>
+          <div class="productPrice">$${item.price}</div>
+          <p>${item.description}</p>
+          <button class="addToCart">
+            <i class="fa-solid fa-cart-plus fa-bounce fa-sm" style="color: #33d17a;"></i>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+  return productList;
+}
+
+// Function to update the cart list based on sorting
+function cartList() {
   let cartul = document.querySelector("#CartItems");
   let total = 0;
 
-  addBtn.forEach((btn, index) => {
-    btn.addEventListener("click", function () {
+  // Event delegation for the 'add' buttons
+  document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("add")) {
+      let index = Array.from(document.querySelectorAll(".add")).indexOf(
+        event.target
+      );
       let name = document.querySelectorAll(".name")[index].textContent;
       let price = parseFloat(
         document.querySelectorAll(".price")[index].textContent.slice(1)
@@ -71,94 +111,37 @@ function cartList() {
         totalOutput.textContent = `Total: $${total.toFixed(2)}`;
       });
 
-      //
-      //
-
       // Add the item price to the total
       total += price;
       totalOutput.textContent = `Total: $${total.toFixed(2)}`;
-    });
+    }
   });
 }
-/*Diese Funktionen sorgen für die Berechnung und Aktualisierung des Gesamtpreises im Warenkorb.
- calculateTotal wird einmal aufgerufen, wenn die Seite geladen wird, 
-um den Anfangswert des Gesamtpreises anzuzeigen.*/
+
+// Function to calculate and update the total
 function calculateTotal() {
   let prices = document.querySelectorAll(".price");
   let total = 0;
 
   prices.forEach((price) => {
-    total += parseFloat(price.textContent);
-    total.innerHTML = "";
+    total += parseFloat(price.textContent.slice(1));
   });
 
   totalOutput.textContent = `Total: $${total.toFixed(2)}`;
 }
 
-/*Hier wird ein Event Listener hinzugefügt, 
-der auf Klicks des Nutzers auf die Schaltfläche zum Ein- und Ausblenden
- der Seitenleiste reagiert.
-
-Ich hoffe, das hilft! Lass mich wissen, wenn du weitere Fragen hast.*/
+// Toggle sidebar visibility
 let sidebar = document.querySelector(".aside");
 let btnSideBar = document.querySelector(".btnX");
 
 btnSideBar.addEventListener("click", function () {
   sidebar.classList.toggle("active");
 });
-//sort by price
-// ...
-
-// Function to generate the product list HTML
-function generateProductList(products) {
-  let productList = "";
-  for (let item of products) {
-    productList += `
-      <div class="productItem">
-        <img class="productImage" src="${item.image}" alt="${item.name}">
-        <div class="productDetails">
-          <h2 class="productName">${item.name}</h2>
-          <h2 class="productBrand">${item.brand}</h2>
-          <div class="productPrice">$${item.price}</div>
-          <p>${item.description}</p>
-          <button class="addToCart">
-            <i class="fa-solid fa-cart-plus fa-bounce fa-sm" style="color: #33d17a;"></i>
-          </button>
-        </div>
-      </div>
-    `;
-  }
-  return productList;
-}
-
-// Function to update the product list based on sorting
-function updateProductList() {
-  const selectPrice = document.getElementById("selectPrice");
-  const selectedValue = selectPrice.value;
-
-  let sortedProducts;
-
-  if (selectedValue === "lowest") {
-    sortedProducts = users.slice().sort((a, b) => a.price - b.price);
-    OUTPUT.style.display = "none";
-  } else if (selectedValue === "highest") {
-    sortedProducts = users.slice().sort((a, b) => b.price - a.price);
-    OUTPUT.style.display = "none";
-  } else {
-    // Default case or any other sorting logic
-    sortedProducts = users.slice();
-  }
-
-  ProductS.innerHTML = generateProductList(sortedProducts);
-}
-
-// ...
 
 // Add event listener for sorting when the select box changes
+let selectPrice = document.getElementById("selectPrice");
 selectPrice.addEventListener("change", updateProductList);
 
-// ...
-
-// Call the function to initially load the products
+// Call functions to initialize the page
 cartList();
 calculateTotal();

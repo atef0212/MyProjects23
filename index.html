@@ -14,26 +14,53 @@
   </head>
   <body>
     <div class="NavContainer">
-      <div class="eye1"><div class="eye2"></div></div>
+      
       <nav class="nav">
         <ul class="navLi">
           <li class="Navli1 li"><a href="#">Home</a></li>
           <li class="Navli2 li"><a href="#">About</a></li>
           <li class="Navli3 li"><a href="#">Contact</a></li>
-          <li class="Navli4 li"><a href="#">Computer</a></li>
+          <li class="Navli4 li"><a href="./shoppingCart.html">cart</a></li>
         </ul>
       </nav>
+    </div>
+
+
+
+    <!-- <div class="eye1"><div class="eye2"></div></div>
       <div class="eye3">
         ss
         <div class="eye4"></div>
-      </div>
-    </div>
-    <ul class="Product"></ul>
+      </div> -->
 
+      <!-- <div id="buttons">
+        <button class="button-value" onclick="filterProduct('all')">All</button>
+        <button class="button-value" onclick="filterProduct('Apple')">
+          Apple
+        </button>
+        <button class="button-value" onclick="filterProduct('ZTE')">ZTE</button>
+        <button class="button-value" onclick="filterProduct('Samsung')">
+          Samsung
+        </button>
+      </div> -->
+    </div>
+
+
+    <div>
+      <label for="selectPrice">Select Price:</label>
+      <select id="selectPrice">
+        <option value="default">Default</option>
+        <option value="lowest">Lowest Price</option>
+        <option value="highest">Highest Price</option>
+      </select>
+    </div>
     <aside class="aside">
       <h1 id="asideHead">Shopping Cart</h1>
 
       <ul id="CartItems"></ul>
+      <div class="totalPrice">
+        <h2 id="total"></h2>
+      </div>
     </aside>
     <button class="btnX">
       <i
@@ -41,6 +68,8 @@
         style="color: #1e1d1b"
       ></i>
     </button>
+    <ul class="Product"></ul>
+    <ul class="ProductS"></ul>
   </body>
   <script type="module" src="myPro.js"></script>
 </html>
