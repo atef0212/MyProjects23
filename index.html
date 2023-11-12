@@ -13,63 +13,60 @@
     <script src="https://kit.fontawesome.com/f6adf96490.js"></script>
   </head>
   <body>
+    <div class="burger-menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+
     <div class="NavContainer">
-      
       <nav class="nav">
         <ul class="navLi">
           <li class="Navli1 li"><a href="#">Home</a></li>
           <li class="Navli2 li"><a href="#">About</a></li>
           <li class="Navli3 li"><a href="#">Contact</a></li>
-          <li class="Navli4 li"><a href="./shoppingCart.html">cart</a></li>
         </ul>
       </nav>
-    </div>
-
-
-
-    <!-- <div class="eye1"><div class="eye2"></div></div>
-      <div class="eye3">
-        ss
-        <div class="eye4"></div>
-      </div> -->
-
-      <!-- <div id="buttons">
-        <button class="button-value" onclick="filterProduct('all')">All</button>
-        <button class="button-value" onclick="filterProduct('Apple')">
-          Apple
-        </button>
-        <button class="button-value" onclick="filterProduct('ZTE')">ZTE</button>
-        <button class="button-value" onclick="filterProduct('Samsung')">
-          Samsung
-        </button>
-      </div> -->
-    </div>
-
-
-    <div>
-      <label for="selectPrice">Select Price:</label>
-      <select id="selectPrice">
-        <option value="default">Default</option>
-        <option value="lowest">Lowest Price</option>
-        <option value="highest">Highest Price</option>
-      </select>
-    </div>
-    <aside class="aside">
-      <h1 id="asideHead">Shopping Cart</h1>
-
-      <ul id="CartItems"></ul>
-      <div class="totalPrice">
-        <h2 id="total"></h2>
+      <div class="logoImg">
+        <img id="logo" src="./img/logo.png" alt="" />
       </div>
-    </aside>
-    <button class="btnX">
-      <i
-        class="fa-regular fa-circle-xmark fa-spin fa-sm"
-        style="color: #1e1d1b"
-      ></i>
-    </button>
-    <ul class="Product"></ul>
-    <ul class="ProductS"></ul>
+    </div>
+    <div class="slectFitler">
+      <label for="priceRange">Select Price Range:</label>
+      <select id="priceRange" onchange="filterProducts()">
+        <option value="all">All</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <label for="brandFilter">Select Brand:</label>
+      <select id="brandFilter" onchange="filterProducts()">
+        <option value="all">All Brands</option>
+        <option value="XIAOMI">XIAOMI</option>
+        <option value="ZTE">ZTE</option>
+        <option value="APPLE">APPLE</option>
+        <option value="SAMSUNG">SAMSUNG</option>
+        <option value="SWISSTONE">SWISSTONE</option>
+      </select>
+
+      <button class="btnX">
+        <i
+          class="fa-solid fa-cart-shopping fa-shake fa-2xl"
+          style="color: #e01b24"
+        ></i>
+      </button>
+    </div>
+    <div id="Product">
+      <!-- Product items will be dynamically added here -->
+    </div>
+
+    <div id="cart">
+      <h2>Shopping Cart</h2>
+      <ul id="cartItems"></ul>
+      <p>Total: $<span id="totalPrice">0.00</span></p>
+    </div>
   </body>
-  <script type="module" src="myPro.js"></script>
+
+  <script src="app.js"></script>
 </html>
