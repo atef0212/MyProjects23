@@ -225,7 +225,7 @@ select {
 
 /* Media Query for Mobile Devices */
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .NavContainer {
     height: auto;
     flex-direction: column;
@@ -242,23 +242,102 @@ select {
   }
   #Product {
     margin-top: 20%;
-
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
     height: 90%;
     border: none;
+    position: absolute;
+    left: 0%;
   }
   .product img {
-    width: 80px;
+    width: 50%;
     height: auto;
     margin-bottom: 10px;
   }
   .slectFitler {
     border: 8px hidden #ccc;
     font-size: 0.5rem;
+    margin-top: 15%;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .footer {
+    color: white;
+    border: 2px hidden rgb(239, 7, 7);
+    position: absolute;
+    bottom: -28%;
+    width: 100%;
+    height: 14rem;
+    font-size: 0.5rem;
+  }
+  #cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    height: fit-content;
+    position: absolute;
+    top: 17.3%;
+    right: 30%;
+    display: none;
+  }
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  #cart.active {
+    display: block;
+  }
+}
+@media (min-width: 601px) and (max-width: 1024px) {
+  .NavContainer {
+    height: auto;
+    flex-direction: column;
+  }
+  .nav {
+    margin-left: 0;
+  }
+  .slectFitler {
+    width: 80%;
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  #Product {
+    margin-top: 20%;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 70%;
+    position: absolute;
+    left: 9%;
+  }
+  .product img {
+    width: 60%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .slectFitler {
+    border: 8px hidden #ccc;
+    width: 55%;
+    font-size: 1rem;
     margin-top: 15%;
     color: red;
     display: flex;
