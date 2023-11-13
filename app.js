@@ -73,6 +73,14 @@ const products = [
     image: "img/ASSET_MMS_109447874.webp",
     description: "ZTE Blade A3+ 64 GB Space Gray Dual SIM.",
   },
+  {
+    id: 10,
+    name: "S23+ 128 GB",
+    marke: "SAMSUNG",
+    price: 750,
+    image: "img/s22.jpeg",
+    description: "SAMSUNG REFURBISHED (*) S23+ 128 GB Schwarz Dual SIM",
+  },
 ];
 
 const cartItems = [];
