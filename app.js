@@ -150,3 +150,5 @@ btnSideBar.addEventListener("click", function () {
 });
 // Initial display
 filterProducts();
+
+//burger menu
