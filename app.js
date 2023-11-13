@@ -135,7 +135,7 @@ function updateCart() {
     listItem.innerHTML = `
     <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px; margin-right: 10px;">
     <span>${item.name} - ${item.marke} - $${item.price}</span>
-    <button class="remove-btn" onclick="removeFromCart(${index})">Remove</button>
+    <button class="remove-btn" onclick="removeFromCart(${index})"><i class="fa-solid fa-trash fa-lg" style="color: #e70808;"></i></button>
   `;
     cartItemsList.appendChild(listItem);
   });
@@ -150,11 +150,3 @@ btnSideBar.addEventListener("click", function () {
 });
 // Initial display
 filterProducts();
-
-// Add this inside your existing script tag
-const burgerMenu = document.querySelector(".burger-menu");
-const navContainer = document.querySelector(".NavContainer");
-
-burgerMenu.addEventListener("click", () => {
-  navContainer.classList.toggle("active-nav");
-});

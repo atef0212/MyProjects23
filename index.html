@@ -13,12 +13,6 @@
     <script src="https://kit.fontawesome.com/f6adf96490.js"></script>
   </head>
   <body>
-    <div class="burger-menu">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
-
     <div class="NavContainer">
       <nav class="nav">
         <ul class="navLi">
@@ -32,7 +26,7 @@
       </div>
     </div>
     <div class="slectFitler">
-      <label for="priceRange">Select Price Range:</label>
+      <label class="label" for="priceRange">Select Price Range:</label>
       <select id="priceRange" onchange="filterProducts()">
         <option value="all">All</option>
         <option value="low">Low</option>
@@ -40,7 +34,7 @@
         <option value="high">High</option>
       </select>
 
-      <label for="brandFilter">Select Brand:</label>
+      <label class="label" for="brandFilter">Select Brand:</label>
       <select id="brandFilter" onchange="filterProducts()">
         <option value="all">All Brands</option>
         <option value="XIAOMI">XIAOMI</option>

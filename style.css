@@ -131,12 +131,8 @@ select {
 }
 
 .remove-btn {
-  background-color: #ff0000;
-  color: #fff;
-  padding: 5px 10px;
   border: none;
   cursor: pointer;
-  border-radius: 3px;
 }
 
 #totalPrice {
@@ -149,62 +145,59 @@ select {
   margin-bottom: 10px;
 }
 
-/* Burger Menu Styles */
-.burger-menu {
-  display: none;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 20px;
-}
-
-.bar {
-  background-color: #1f1111;
-  height: 4px;
-  width: 30px;
-  border-radius: 2px;
-}
-
 /* Media Query for Mobile Devices */
 @media (max-width: 768px) {
-  .burger-menu {
+  #Product {
     display: flex;
-  }
-
-  /* Hide the regular navigation on mobile */
-  .nav {
-    display: none;
-  }
-
-  /* Show the navigation when burger menu is active */
-  .NavContainer.active-nav .nav .product {
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
+    width: 400px;
+    flex-wrap: wrap;
     position: absolute;
-    top: 70px; /* Adjust the top value based on your design */
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 4rem;
   }
-  #product {
+  .product img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  .slectFitler {
+    border: 2px hidden #ccc;
+    font-size: 0.5rem;
+    color: red;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 1rem;
     position: absolute;
-    top: 70px; /* Adjust the top value based on your design */
-    left: 0;
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 1rem;
   }
-  /* Style for the navigation links in the mobile view */
-  .nav a {
-    margin: 10px;
+  .NavContainer {
+    display: none;
+  }
+  .label {
+    display: none;
+  }
+  .btnX {
+    padding-left: 4rem;
+  }
+  #cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    height: fit-content;
+    position: absolute;
+    top: 11.3%;
+    right: 30%;
+    display: none;
+  }
+  #cart.active {
+    display: block;
   }
 }
