@@ -88,9 +88,9 @@ function filterProducts() {
   const filteredProducts = products.filter((product) => {
     const meetsPriceCriteria =
       priceRange === "all" ||
-      (priceRange === "low" && product.price <= 350) ||
+      (priceRange === "low" && product.price <= 250) ||
       (priceRange === "medium" &&
-        product.price > 200 &&
+        product.price > 350 &&
         product.price <= 450) ||
       (priceRange === "high" && product.price > 500);
 
