@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Caveat&family=Lato:wght@300&family=Lobster&family=Pacifico&family=Teko&family=Tilt+Prism&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/f6adf96490.js"></script>
+
+    <style>
+      body {
+        font-family: "Lato", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      .logoImg {
+        border: 2px rebeccapurple hidden;
+      }
+      #logo {
+        width: 5rem;
+
+        position: sticky;
+
+        z-index: 5;
+      }
+      .NavContainer {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #ffffff;
+        flex-wrap: wrap;
+        color: #fff;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 3;
+        height: 20%;
+      }
+      .nav {
+        display: flex;
+        border: 2px hidden red;
+        margin-left: 300px;
+      }
+
+      .navLi {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .li {
+        display: inline;
+      }
+      a {
+        margin: 1rem;
+        text-decoration: none;
+        color: #080000;
+        font-size: 2rem;
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #ffd700;
+      }
+      .active-link {
+        border-bottom: 2px solid #ffd700;
+      }
+
+      label {
+        margin-right: 10px;
+      }
+
+      /* About section styles */
+      .about-section {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin: 20px;
+        border-radius: 8px;
+        width: 50%;
+        margin-left: 300px;
+        margin-top: 50px;
+      }
+      .about-section p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      /* footer styles */
+      .footer {
+        color: white;
+        border: 2px hidden rgb(239, 7, 7);
+        position: absolute;
+        bottom: 0%;
+        width: 99.2vw;
+        height: 14rem;
+        background: #000000;
+        background: -moz-linear-gradient(
+          top,
+          #000000 0%,
+          #1c6ea4 58%,
+          #4a6f5e 100%
+        );
+        background: -webkit-linear-gradient(
+          top,
+          #000000 0%,
+          #1c6ea4 58%,
+          #4a6f5e 100%
+        );
+        background: linear-gradient(
+          to bottom,
+          #000000 0%,
+          #1c6ea4 58%,
+          #4a6f5e 100%
+        );
+      }
+      .fCon {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 150px;
+        border: 2px hidden rgb(8, 140, 8);
+      }
+      .line {
+        border-bottom: 9px solid #242625;
+      }
+      .imgF {
+        width: 5rem;
+      }
+      .iconFooter {
+        width: 99vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding-left: 40%;
+        padding-top: 10px;
+        height: 50px;
+        background: #000000;
+        background: -moz-radial-gradient(
+          center,
+          #000000 0%,
+          #1c6ea4 43%,
+          #375346 100%
+        );
+        background: -webkit-radial-gradient(
+          center,
+          #000000 0%,
+          #1c6ea4 43%,
+          #375346 100%
+        );
+        background: radial-gradient(
+          ellipse at center,
+          #000000 0%,
+          #1c6ea4 43%,
+          #375346 100%
+        );
+      }
+      .iDiv {
+        width: 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .iDiv i {
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="NavContainer">
+      <nav class="nav">
+        <ul class="navLi">
+          <li class="Navli1 li"><a href="./index.html">Home</a></li>
+          <li class="Navli2 li"><a href="#">About</a></li>
+          <li class="Navli3 li"><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="logoImg">
+        <img id="logo" src="./img/logo.png" alt="Logo" />
+      </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+      <h2>About Us</h2>
+      <p>
+        Welcome to PhoneCall Company, your go-to destination for the latest and
+        greatest smartphones! We are passionate about providing high-quality
+        phones, excellent service, and unbeatable prices to our customers. Our
+        mission is to make your phone-buying experience enjoyable and
+        hassle-free.
+      </p>
+      <p>
+        Explore our wide range of products, from top brands like XIAOMI, ZTE,
+        APPLE, SAMSUNG, and SWISSTONE. Whether you're looking to buy, sell, or
+        repair your phone, we've got you covered.
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div class="fCon">
+        <div class="logoF">
+          <img class="imgF" src="./img/logo.png" alt="Logo" />
+          <h1>PhoneCall Company</h1>
+        </div>
+
+        <div class="service">
+          <h2>Sell</h2>
+          <h2>Buy</h2>
+          <h2>repair</h2>
+        </div>
+
+        <div class="contact">
+          <h2>
+            <i
+              class="fa-solid fa-phone-volume fa-beat-fade fa-sm"
+              style="color: #8ff0a4"
+            ></i
+            >02825 8848100
+          </h2>
+
+          <h2>Hauptstraße 24</h2>
+          <h2>info@gmail.com</h2>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="iconFooter">
+        <div class="iDiv">
+          <i class="fa-solid fa-x fa-beat fa-lg" style="color: #c8d1dc"></i>
+
+          <i class="fa-regular fa-envelope fa-beat-fade fa-lg"></i>
+          <i
+            class="fa-brands fa-facebook-f fa-beat-fade fa-lg"
+            style="color: #dfe6ee"
+          ></i>
+        </div>
+
+        <p>&copy;PhoneCall Company . All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
