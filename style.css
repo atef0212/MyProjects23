@@ -87,8 +87,7 @@ select {
   display: flex;
   flex-wrap: wrap;
   border-top: 2px outset rgba(26, 75, 164, 0.73);
-  border-bottom: 2px groove #1c6ea4;
-  border-radius: 0px 0px 15px 15px;
+
   width: 40%;
   height: 85%;
   position: absolute;

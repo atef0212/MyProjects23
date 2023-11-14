@@ -79,7 +79,7 @@ const products = [
     marke: "SAMSUNG",
     price: 750,
     image: "img/s22.jpeg",
-    description: "SAMSUNG REFURBISHED (*) S23+ 128 GB Schwarz Dual SIM",
+    description: "SAMSUNG  S23+ 128 GB Schwarz Dual SIM",
   },
 ];
 
